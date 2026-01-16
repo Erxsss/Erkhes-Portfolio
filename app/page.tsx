@@ -1,7 +1,9 @@
 export default function Page() {
   return (
     <div>
-      asdfasdf
+      <div>
+        asdf
+      </div>
     </div>
   );
 }
