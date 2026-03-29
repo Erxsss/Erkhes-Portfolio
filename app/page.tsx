@@ -1,7 +1,11 @@
+import MenuBar from "./_components/menubar";
+
 export default function Page() {
   return (
-    <div>
-      <div className="text-4xl font-bold text-red-500 ">hi</div>
+    <div className="text-white">
+      <div>
+        <MenuBar />
+      </div>
     </div>
   );
 }
