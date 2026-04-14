@@ -7,6 +7,7 @@ export default function Page() {
     name: "Software Engineering",
     color: "blue",
   });
+
   useEffect(() => {
     const interval = setInterval(() => {
       setText((prev) =>
@@ -15,7 +16,6 @@ export default function Page() {
           : { name: "Software Engineering", color: "blue" },
       );
     }, 3000);
-
     return () => clearInterval(interval);
   }, []);
   return (
@@ -24,13 +24,13 @@ export default function Page() {
         <MenuBar />
       </div>
       <div className="w-[100vw] h-[90vh] flex justify-center items-center">
-        <div className="w-[80%] h-[80%] p-[10px] ">
-          <div className="w-[50%] h-[100%]">
+        <div className="w-[80%] h-[80%] p-[10px] flex justify-between">
+          <div className="w-[50%] h-[80%] flex  flex-col justify-evenly ">
             <div className="text-[#008000] font-extrabold text-7xl flex flex-col gap-[15px]">
               Hello, I am
               <div>Erkhes B.</div>
             </div>
-            <div className="text-white text-4xl font-extrabold">
+            <div className="text-white text-[40px] font-extrabold">
               {text.color === "blue" ? (
                 <div className="text-[#00b9ec] flex gap-[10px]">
                   {text.name}
@@ -43,56 +43,52 @@ export default function Page() {
                 </div>
               )}
             </div>
-            <div className="text-white font-extrabold">
-              I’m a student developer and designer from Mongolia. I build
+            <div className="text-white font-extrabold text-[18px]">
+              I am a student developer and designer from Mongolia. I build
               full-stack projects and design interfaces using Figma.
             </div>
-            <div className="flex">
-              <div className="flex items-center gap-[14px] mt-[6px]">
-                {/* LinkedIn */}
-                <a
-                  className="w-[52px] h-[52px] rounded-[10px] overflow-hidden border-2 border-transparent hover:border-white transition-all hover:-translate-y-0.5 bg-[#111]"
-                  href="#"
-                >
-                  <img
-                    src="https://i.pinimg.com/474x/e5/2d/f9/e52df9ea7fdc3b59ee42eda0a10c9ca0.jpg"
-                    alt="LinkedIn"
-                    className="w-full h-full object-cover"
-                  />
-                </a>
-
-                {/* GitHub */}
-                <a
-                  className="w-[52px] h-[52px] rounded-[10px] overflow-hidden border-2 border-transparent hover:border-white transition-all hover:-translate-y-0.5 bg-white p-1.5"
-                  href="#"
-                >
-                  <img
-                    src="https://images.icon-icons.com/3685/PNG/512/github_logo_icon_229278.png"
-                    alt="GitHub"
-                    className="w-full h-full object-contain"
-                  />
-                </a>
-
-                {/* Email */}
-                <a
-                  className="w-[52px] h-[52px] rounded-[10px] overflow-hidden border-2 border-transparent hover:border-white transition-all hover:-translate-y-0.5 bg-[#111] flex items-center justify-center"
-                  href="#"
-                >
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/561/561127.png"
-                    alt="Email"
-                    className="w-[70%] h-[70%] object-contain"
-                  />
-                </a>
-
-                <button className="h-[52px] px-7 bg-transparent text-white border-2 border-[#444] rounded-[10px] font-bold hover:bg-[#008000] hover:border-white hover:-translate-y-0.5 transition-all">
-                  Get Started
+            <div className="flex items-center gap-[100px]">
+              <a href="https://www.instagram.com/erxes__24/" target="_blank">
+                <img
+                  src="https://i.pinimg.com/474x/e5/2d/f9/e52df9ea7fdc3b59ee42eda0a10c9ca0.jpg"
+                  alt=""
+                  className="h-[65px] w-[65px] object-contain hover:scale-110 transition"
+                />
+              </a>
+              <a href="https://github.com/Erxsss" target="_blank">
+                <img
+                  src="https://images.icon-icons.com/3685/PNG/512/github_logo_icon_229278.png"
+                  alt=""
+                  className="h-[50px] w-[50px] object-contain hover:scale-110 transition"
+                />
+              </a>
+              <a href="mailto:erkhessw@email.com">
+                <img
+                  src="https://media.istockphoto.com/id/1161114191/vector/email-icon-on-black-background-black-flat-style-vector-illustration.jpg?s=612x612&w=0&k=20&c=bm6GYaYIYZnIRL6X_L-7uaa2VYOM2iyK-4mboET9bKw="
+                  alt=""
+                  className="h-[75px] w-[75px] object-contain hover:scale-110 transition"
+                />
+              </a>
+              <div>
+                <button className="bg-[#009b08] text-[15px] rounded-2xl text-white font-extrabold h-[50px] w-[150px] hover:border-2 transition duration-300 ease-in-out  ">
+                  Get started
                 </button>
               </div>
             </div>
           </div>
 
-          <div></div>
+          <div>
+            <div className="relative w-[430px] h-[600px]  rounded-[40px] overflow-hidden">
+              <img
+                src="https://i.pinimg.com/originals/c5/9a/d2/c59ad2bd4ad2fbacd04017debc679ddb.gif"
+                className="absolute w-full h-full object-cover"
+              />
+              <img
+                src="https://zoxowmwtwran1uwo.public.blob.vercel-storage.com/edited-photo.png"
+                className="absolute object-contain  z-10 w-[700px] h-[700px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
