@@ -18,6 +18,7 @@ export default function Page() {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
+  console.log("test");
   return (
     <div className="">
       <div>
