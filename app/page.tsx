@@ -7,7 +7,7 @@ export default function Page() {
     name: "Software Engineering",
     color: "blue",
   });
-
+  const [imageUrl, setImageUrl] = useState("");
   useEffect(() => {
     const interval = setInterval(() => {
       setText((prev) =>
