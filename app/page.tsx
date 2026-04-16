@@ -7,7 +7,9 @@ export default function Page() {
     name: "Software Engineering",
     color: "blue",
   });
-  const [imageUrl, setImageUrl] = useState("");
+  const [imageUrl, setImageUrl] = useState(
+    "https://zoxowmwtwran1uwo.public.blob.vercel-storage.com/edited-photo.png",
+  );
   useEffect(() => {
     const interval = setInterval(() => {
       setText((prev) =>
@@ -16,12 +18,23 @@ export default function Page() {
           : { name: "Software Engineering", color: "blue" },
       );
     }, 3000);
-    return () => clearInterval(interval);
+    const interval2 = setInterval(() => {
+      setImageUrl((prev) =>
+        prev ===
+        "https://zoxowmwtwran1uwo.public.blob.vercel-storage.com/Untitled.png"
+          ? "https://zoxowmwtwran1uwo.public.blob.vercel-storage.com/edited-photo.png"
+          : "https://zoxowmwtwran1uwo.public.blob.vercel-storage.com/Untitled.png",
+      );
+    }, 5000);
+    return () => {
+      clearInterval(interval);
+      clearInterval(interval2);
+    };
   }, []);
   console.log("test");
   return (
     <div className="">
-      <div>
+      <div className="h-[10vh]">
         <MenuBar />
       </div>
       <div className="w-[100vw] h-[90vh] flex justify-center items-center">
@@ -85,13 +98,14 @@ export default function Page() {
                 className="absolute w-full h-full object-cover"
               />
               <img
-                src="https://zoxowmwtwran1uwo.public.blob.vercel-storage.com/edited-photo.png"
+                src={imageUrl}
                 className="absolute object-contain  z-10 w-[700px] h-[700px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
               />
             </div>
           </div>
         </div>
       </div>
+      <div className="w-[100%] h-[100vh]"></div>
     </div>
   );
 }
