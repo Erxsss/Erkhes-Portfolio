@@ -7,9 +7,7 @@ export default function Page() {
     name: "Software Engineering",
     color: "blue",
   });
-  const [imageUrl, setImageUrl] = useState(
-    "https://zoxowmwtwran1uwo.public.blob.vercel-storage.com/edited-photo.png",
-  );
+  const [imageUrl, setImageUrl] = useState("");
   useEffect(() => {
     const interval = setInterval(() => {
       setText((prev) =>
@@ -19,12 +17,7 @@ export default function Page() {
       );
     }, 3000);
     const interval2 = setInterval(() => {
-      setImageUrl((prev) =>
-        prev ===
-        "https://zoxowmwtwran1uwo.public.blob.vercel-storage.com/Untitled.png"
-          ? "https://zoxowmwtwran1uwo.public.blob.vercel-storage.com/edited-photo.png"
-          : "https://zoxowmwtwran1uwo.public.blob.vercel-storage.com/Untitled.png",
-      );
+      setImageUrl((prev) => (prev === "" ? "" : ""));
     }, 5000);
     return () => {
       clearInterval(interval);
@@ -97,15 +90,19 @@ export default function Page() {
                 src="https://i.pinimg.com/originals/c5/9a/d2/c59ad2bd4ad2fbacd04017debc679ddb.gif"
                 className="absolute w-full h-full object-cover"
               />
-              <img
+              {/* <img
                 src={imageUrl}
                 className="absolute object-contain  z-10 w-[700px] h-[700px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-              />
+              /> */}
             </div>
           </div>
         </div>
       </div>
-      <div className="w-[100%] h-[100vh]"></div>
+      <div className="w-[100%] h-[60vh] flex justify-evenly items-center">
+        <div className="h-[50%] w-[20%] border-2 border-[#009b08] rounded-2xl"></div>
+        <div className="h-[50%] w-[20%] border-2 border-[#009b08] rounded-2xl"></div>
+        <div className="h-[50%] w-[20%] border-2 border-[#009b08] rounded-2xl"></div>
+      </div>
     </div>
   );
 }
