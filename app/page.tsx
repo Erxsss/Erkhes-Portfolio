@@ -30,7 +30,7 @@ export default function Page() {
       <div className="h-[10vh]">
         <MenuBar />
       </div>
-      <div className="w-[100vw] h-[90vh] flex justify-center items-center">
+      <div className="w-[100vw] h-[80vh] flex justify-center items-center">
         <div className="w-[80%] h-[80%] p-[10px] flex justify-between">
           <div className="w-[50%] h-[80%] flex  flex-col justify-evenly ">
             <div className="text-[#008000] font-extrabold text-7xl flex flex-col gap-[15px]">
@@ -98,11 +98,21 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="w-[100%] h-[50vh] flex justify-evenly items-center">
-        <div className="h-[50%] w-[20%] border-2 border-[#009b08] rounded-2xl"></div>
+      <div className="w-[100%] h-[60vh] flex justify-evenly items-center">
+        <div className="h-[50%] w-[20%] border-2 border-[#009b08] rounded-2xl p-[20px]">
+          <div className="text-white font-bold">Who I am?</div>
+          <div>
+            <hr className="border-[2px] border-[#009b08] rounded" />
+          </div>
+          <div className="text-gray-200">
+            My name is Erkhes, a 15-year-old student developer from Mongolia
+            passionate about machine learning, and building future tech
+            startups.
+          </div>
+        </div>
         <div className="h-[50%] w-[20%] border-2 border-[#009b08] rounded-2xl"></div>
         <div className="h-[50%] w-[20%] border-2 border-[#009b08] rounded-2xl"></div>
       </div>
     </div>
-  );  
+  );
 }
