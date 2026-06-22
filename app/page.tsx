@@ -98,11 +98,11 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="w-[100%] h-[60vh] flex justify-evenly items-center">
+      <div className="w-[100%] h-[50vh] flex justify-evenly items-center">
         <div className="h-[50%] w-[20%] border-2 border-[#009b08] rounded-2xl"></div>
         <div className="h-[50%] w-[20%] border-2 border-[#009b08] rounded-2xl"></div>
         <div className="h-[50%] w-[20%] border-2 border-[#009b08] rounded-2xl"></div>
       </div>
     </div>
-  );
+  );  
 }
